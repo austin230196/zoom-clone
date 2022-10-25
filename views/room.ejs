@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Soom clone</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const ROOMID = "<%= roomId %>"
+    </script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="main__left">
+            <div id="videos">
+            </div>
+            <div id="controls">
+                <div class="constraints">
+                    <span id="audio">
+                        <i class="fa-solid fa-microphone"></i>
+                        <span>Mute</span>
+                    </span>
+                    <span id="video">
+                        <i class="fa-solid fa-video"></i>
+                        <span>Stop Video</span>
+                    </span>
+                </div>
+
+                <div class="middle_controls">
+                    <span id="security">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Security</span>
+                    </span>
+                    <span id="participants">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Participants</span>
+                    </span>
+                    <span id="chat">
+                        <i class="fa-solid fa-message"></i>
+                        <span>Chat</span>
+                    </span>
+                </div>
+                <button>Leave Meeting</button>
+            </div>
+        </div>
+        <div class="main__right">
+            <h3>Chat</h3>
+            <div id="messages"></div>
+            <div class="input_container">
+                <input id="input" type="text" placeholder="Type message here...">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

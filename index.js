@@ -54,7 +54,7 @@ io.on("connection", socket => {
 
 
 app.get("/", async(req, res, next) => {
-    res.redirect(`/${uuid(40)}`)
+    res.render("home", {})
 })
 
 
